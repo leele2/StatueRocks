@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react"
 import { createRoot } from "react-dom/client"
-import { mixColor } from "alt1/base"
-import ChatBoxReader from "alt1/chatbox"
+import { mixColor } from "alt1/dist/base"
+import ChatBoxReader from "alt1/dist/chatbox"
 import { displayDetectionMessage, alt1 } from "./helpers"
 
 const skills = [
@@ -299,7 +299,7 @@ function App() {
                 minHeight: "100vh"
             }}
         >
-            <h1 style={{ textAlign: "center", color: "#ffd700", marginBottom: "10px" }}>Rocks</h1>
+            <h1 style={{ textAlign: "center", color: "#ffd700", marginBottom: "0px" }}>Rocks</h1>
 
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
@@ -312,7 +312,7 @@ function App() {
                 <tbody>{activeSkills.map(renderSkillRow)}</tbody>
             </table>
 
-            <div style={{ marginTop: "20px" }}>
+            <div style={{ marginTop: "20px", display: "flex", justifyContent: "center" }}>
                 <button
                     onClick={() => setShowCompleted((s) => !s)}
                     style={{
@@ -326,9 +326,11 @@ function App() {
                 >
                     {showCompleted ? "Hide" : "Show"} Completed Skills ({completedSkills.length})
                 </button>
+            </div>
 
-                {showCompleted && (
-                    <table style={{ width: "100%", marginTop: "10px", borderCollapse: "collapse" }}>
+            {showCompleted && (
+                <div style={{ marginTop: "10px" }}>
+                    <table style={{ width: "100%", borderCollapse: "collapse" }}>
                         <thead>
                             <tr style={{ backgroundColor: "#222" }}>
                                 <th>Skill</th>
@@ -338,8 +340,8 @@ function App() {
                         </thead>
                         <tbody>{completedSkills.map(renderSkillRow)}</tbody>
                     </table>
-                )}
-            </div>
+                </div>
+            )}
 
             <div style={{ marginTop: "20px", textAlign: "center" }}>
                 <button
@@ -405,6 +407,9 @@ function App() {
                         >
                             Cancel
                         </button>
+                        <small style={{ opacity: 0.25, fontSize: "10px", display: "block", marginTop: "4px" }}>
+                            🫐 passive be the berries
+                        </small>
                     </div>
                 </div>
             )}
