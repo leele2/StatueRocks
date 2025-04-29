@@ -408,7 +408,7 @@ function App() {
                             Cancel
                         </button>
                         <small style={{ opacity: 0.25, fontSize: "10px", display: "block", marginTop: "4px" }}>
-                            🫐 passive be the berries
+                            🍇 passive be the berries
                         </small>
                     </div>
                 </div>
