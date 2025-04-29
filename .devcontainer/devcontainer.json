@@ -1,0 +1,13 @@
+{
+	"name": "React App",
+	"image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-20",
+	"forwardPorts": [3000],
+	"settings": {
+	  "terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+	  "dbaeumer.vscode-eslint",
+	  "esbenp.prettier-vscode"
+	]
+  }
+  

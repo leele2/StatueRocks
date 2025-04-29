@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",  // Ensure this is set to the root of your project
+    "paths": {
+      "alt1": ["node_modules/alt1/dist/base"],
+      "alt1/*": ["node_modules/alt1/dist/*"]
+    },
     "jsx": "react",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -17,7 +22,6 @@
     "strictNullChecks": true,
     "moduleResolution": "node",
     "outDir": "dist",
-    "baseUrl": ".",
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
